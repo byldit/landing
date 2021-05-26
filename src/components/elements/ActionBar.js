@@ -17,7 +17,7 @@ const ActionBar = () => (
             <Grid container alignItems="center" justify="center">
               <Box color="primary.contrastText">
                 <Typography variant="h5">
-                  A new way to play lasertag. Coming Soon...
+                  Next JS Starter
                 </Typography>
               </Box>
             </Grid>
