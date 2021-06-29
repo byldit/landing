@@ -25,7 +25,7 @@ const Navbar = () => (
       <Grid  alignItems="center" container justify="center">
         <Grid item xs={10} sm={6} md={4} lg={3}>
           <CenterContent>
-            <StyledImage src="/static/images/some_svg.svg" alt="some_svg" />
+            <StyledImage src="/static/images/byldicon.png" alt="byld icon" />
           </CenterContent>
         </Grid>
       </Grid>

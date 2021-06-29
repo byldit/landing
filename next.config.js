@@ -38,7 +38,7 @@ module.exports = phase => {
     target: 'serverless',
     publicRuntimeConfig: {
       // Will be available on both server and client
-      BACKEND_URL: process.env.BACKEND_URL,
+      BACKEND_URL: process.env.BACKEND_URL || '',
     },
     env,
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {

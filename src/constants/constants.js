@@ -1,1 +1,1 @@
-export const WEBSITE_NAME = "Next JS Starter";
+export const WEBSITE_NAME = "BYLD";
