@@ -16,7 +16,7 @@ const CustomFooter = styled.footer`
 `;
 
 const Footer = () => (
-  <Box width={1} bgcolor="secondary.dark">
+  <Box width={1}>
     <CustomFooter>
       <CenterContent>
         <Box color="white">
