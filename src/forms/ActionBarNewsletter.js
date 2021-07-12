@@ -18,7 +18,7 @@ const ActionBarNewsletter = () => (
           <CenterContent>
             <Typography variant="h4">
               <Box color="primary.contrastText">
-                  For updates, sign up for the Next JS Starter Newsletter
+                  For updates, sign up for the BYLD newsletter
               </Box>
             </Typography>
           </CenterContent>

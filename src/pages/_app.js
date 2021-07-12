@@ -1,9 +1,12 @@
+import "./styles.css";
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import useDarkMode from 'use-dark-mode';
 
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider, StylesProvider } from '@material-ui/core/styles';
+
+
 import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -15,7 +18,8 @@ import { darkTheme, lightTheme } from '../components/elements/theme';
 
 const useStyles = makeStyles(() => ({
   root: {
-    flexGrow: 1,
+    height: "100%",
+    width: "100%",
   },
 }));
 
@@ -30,14 +34,13 @@ const App = ({Component, pageProps}) => {
         <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"/>
         <meta property="og:title" content="Next JS Starter" key="title" />
       </Head>
-      <ThemeProvider theme={ value ? darkTheme : lightTheme }>
-        <CssBaseline />
-        <Grid className={classes.root} container>
-          <Navbar />
-          <Component {...pageProps}/>
-          <Footer />
-        </Grid>
-      </ThemeProvider>
+      <StylesProvider injectFirst>
+        <ThemeProvider theme={ value ? darkTheme : lightTheme }>
+          <CssBaseline />
+            <Navbar />
+            <Component {...pageProps}/>
+        </ThemeProvider>
+      </StylesProvider>
     </Provider>
   );
 };
