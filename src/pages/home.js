@@ -12,14 +12,17 @@ import ActionBarNewsletter from '../forms/ActionBarNewsletter';
 
 const ComingSoon = styled(LazyImage)`
 &&& {
-  margin: 24px auto;
-  width: 80%;
+  margin: 120px auto;
 }
 `;
 
 const Container = styled.div`
+  display: block;
   background-image: url('/static/images/wave.svg');
-  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: calc(100% - 78px);
+  position: absolute;
   width: 100%;
 `;
 
@@ -27,8 +30,6 @@ const Home = () => (
   <Container>
     <Grid item xs={12}>
       <ComingSoon src="/static/images/coming_soon.svg" alt="BYLD" />
-    </Grid>
-    <Grid item xs={12}>
     </Grid>
     <Footer />
   </Container>    
